@@ -2,7 +2,7 @@ import type { Request, Response } from "express"
 import { profileService } from "./profile.services";
 
 const createProfile = async (req: Request, res: Response) => {
-      try {
+  try {
     const result = await profileService.createProfileIntoDB(req.body);
     res.status(201).json({
       success: true,
@@ -16,8 +16,8 @@ const createProfile = async (req: Request, res: Response) => {
       error: error,
     });
   }
+};
 
-}
 export const profileController = {
-    createProfile,
-}
+  createProfile,
+};
